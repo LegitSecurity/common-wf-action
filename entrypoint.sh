@@ -12,6 +12,5 @@ set +e
 response=$(sh -c " $*")
 res=$?
 
-echo "::set-output name=response::$response"
-
+echo "response=$response" >> $GITHUB_OUTPUT
 exit $res
